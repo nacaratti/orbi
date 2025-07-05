@@ -18,7 +18,7 @@ DISCORD_BOT_TOKEN= os.getenv("DISCORD_BOT_TOKEN")
 intents = discord.Intents.default()
 intents.message_content = True
 intents.voice_states = True
-bot = commands.Bot(command_prefix="!", intents=intents)
+bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 
 client = OpenAI(api_key = OPENAI_API_KEY)
 
